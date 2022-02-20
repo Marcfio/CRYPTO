@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset= "utf-8">
+    <meta name="viewport" content="width=500px, initial-scale=1,shrink-to-fit=no">
+    <title>JIMMYDEX</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href= "./style.css">
+    <!---<link rel="stylesheet" href= "./main.js">--->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+  </head>
+
+
+  <body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="\img\logo1.jpg" width="100" height="100" alt="">
+          JIMMIDEX
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">POOL <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">NFT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">DERIVATIVES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <button id = "login_button" class = "btn btn-outline-primary my-2 my-sm-0" type="submit">Login with Metamask</button>
+
+          <!---<button onclick = "logOut()" class = "btn btn-outline-primary my-2 my-sm-0" type="submit">LogOut</button>--->
+
+        </div>
+      </nav>
+
+
+    <div class = "container">
+      <div class = "row">
+         <div class = "col col-md-6 offset-md-3" id= "window" >
+            <h4>Swap</h4>
+            <div id="form">
+                <div class = "swapbox" >
+                  <div class = "swapbox_select  token_select"  id= "from_token_select" >
+                    <img class = "token_image" id = "from_token_img">
+                      <span id = "from_token_text"></span>
+
+                  </div>
+                  <div class = "swapbox_select">
+                        <input class= "number form-control" placeholder = "amount" id = "from_amount">
+
+                  </div>
+                  <div class = "swapbox">
+                    <div class = "swapbox_select  token_select" id = "to_token_select">
+                      <img class = "token_image" id = "to_token_img">
+                        <span id = "to_token_text"></span>
+                    </div>
+                    <div class = "swapbox_select">
+                          <input class= "number form-control" placeholder = "amount" id = "to_amount">
+
+                    </div>
+                  </div>
+                  <div >Estimated Gas: <span id= "gas_estimate"></div>
+
+                    <!-- <button disabled class = "btn btn-large btn-primary btn-block" id = "swap_button"> -->
+                    <button class = "btn btn-large btn-primary btn-block" id = "swap_button">
+
+                      swap
+                    </button>
+                  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="modal" id = "token_modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Select token</h5>
+            <button type="button" id= "modal_close" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id = "token_list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+
+
+</html>
