@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x9650302776b40b0838C075Ff76C6E8e995360892",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x9650302776b40b0838C075Ff76C6E8e995360892",
+  "NETWORK": {
+    "NAME": "Rinkeby",
+    "SYMBOL": "Rinkeby",
+    "ID": 4
+  },
+  "NFT_NAME": "NInja Noun test",
+  "SYMBOL": "NN",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 100000000000000000,
+  "DISPLAY_COST": 0.1,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://market_place_link",
+  "SHOW_BACKGROUND": true
+}
